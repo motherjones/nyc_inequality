@@ -19,7 +19,9 @@ require([
         "jquery.ui.touch-punch.min",
         "jquery.beforeafter-1.4.min"
 ], function(jquery) {
-    $('.nyc-before-after').each(function() {
-        $(this).beforeAfter();
-    });
+    if (document.location.hostname == 'www.motherjones.com') {//not on mobile
+        $('.nyc-before-after').each(function() {
+            $(this).beforeAfter();
+        });
+    }
 }); 
